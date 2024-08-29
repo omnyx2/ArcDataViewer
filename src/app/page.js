@@ -27,6 +27,7 @@ function SearcherRender() {
 }
 
 
+
 function Home () {
         const [dbscanIdx, setDbscanIdx] = useState(0)
 	const [callCluster, setCallCluster] = useState([]);
@@ -48,9 +49,9 @@ function Home () {
           [2, 3, 4, 0, 1],
           [3, 4, 0, 1, 2],
         ];
-	const takeId = (id: String) => id.slice(6,);
+	const takeId = (id) => id.slice(6,);
 	useEffect(()=>{
-		const data = dbscanData[dbscanIdx].map((idx)=> {
+		const data = dbscanData[`${dbscanIdx}`].map((idx)=> {
 		  return recoder[takeId(idx)]
 		})
 		setCurQAs([...data])
