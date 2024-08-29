@@ -1,0 +1,41 @@
+/* styles/FancyList.css */
+.fancy-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fancy-item {
+  padding: 15px 20px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.fancy-item:last-child {
+  border-bottom: none;
+}
+
+.fancy-item:hover {
+  background: #e2e2e2;
+  transform: scale(1.02);
+}
+
+.fancy-item::before {
+  content: "•";
+  margin-right: 10px;
+  color: #6a67ce;
+  font-size: 20px;
+}
+
